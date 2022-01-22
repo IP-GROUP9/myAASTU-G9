@@ -139,3 +139,11 @@ ul.remove-dot {
     position: absolute;
     z-index: -1;
 }
+
+.location-img {
+    padding: 15px;
+    border-radius: 10%;
+    border: 2px double rgb(92, 206, 149);
+    margin: 4px;
+    box-shadow: 0 4px 8px 0 rgba(19, 92, 37, 0.5), 0 6px 20px 0 rgba(19, 92, 37, 0.5);
+}
