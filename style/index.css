@@ -1,8 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,900;1,300;1,400&display=swap");
+
 body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #eee;
   margin: 0;
   padding: 0;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  color: #2f2faa;
 }
 
 .image-container {
@@ -27,6 +36,10 @@ body {
   box-shadow: #ccc 4px 4px 5px, #ccc -4px -4px 5px;
 }
 
+main {
+  min-height: calc(100vh - 206px);
+}
+
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -45,30 +58,22 @@ footer {
 footer a {
   color: blue;
 }
-
-.pagination {
-  text-align: right;
-  margin: 10px;
+.gallary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
-
-.pagination a {
-  padding: 5px 10px;
+.pagination a svg{
+  fill: #4d4de4;
   text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 5px;
   margin: 0 5px;
 }
 
-.pagination a:hover {
-  background-color: #ccc;
+.pagination a svg:hover {
+  fill: #24248a;
+  transform: scale(1.1);
 }
 
-.pagination a.active {
-  background-color: darkslateblue;
-  color: white;
-  font-weight: bold;
-  box-shadow: #999 3px 3px 3px;
-}
 nav {
   position: fixed;
   right: 0;
@@ -99,15 +104,13 @@ main.container {
 .links a {
   margin: 0 1px;
   text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 500;
+  text-transform: capitalize;
   color: blue;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .links a:hover {
-  background-color: rgba(204, 204, 204, 0.753);
-  color: rgb(0, 0, 209);
+  color: rgb(11, 11, 143);
 }
 .links a.active {
   border-bottom: 3px solid blue;
@@ -124,7 +127,7 @@ main.container {
 }
 .event-card img {
   display: block;
-  max-width: 400px;
+  max-width: 300px;
 }
 .event-card div {
   padding: 15px;
@@ -160,7 +163,7 @@ main.container {
   align-items: center;
 }
 .top:hover {
-  background-color: rgba(35, 35, 255, 0.849);
+  background-color: rgba(122, 122, 129, 0.849);
   transform: scale(1.1);
 }
 .product-img {
@@ -307,10 +310,66 @@ ul.remove-dot {
 }
 
 .location-img {
-  padding: 15px;
-  border-radius: 10%;
-  border: 2px double rgb(92, 206, 149);
-  margin: 4px;
-  box-shadow: 0 4px 8px 0 rgba(19, 92, 37, 0.5),
-    0 6px 20px 0 rgba(19, 92, 37, 0.5);
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 4px 8px 10px #ccc,
+    0 6px 20px 0 #ccc;
+}
+
+area {
+	border: 5px solid #4d4de4;
+	border-radius: 10px;
+}
+/* about us cards */
+.card-conatiner {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  display: inline-block;
+  margin: 10px 5px;
+  flex: 1;
+  padding: 10px;
+  max-width: 400px;
+  min-width: 300px;
+  box-shadow: #ddd 3px 3px 6px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  background-color: white;
+}
+.card h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #3f3ff2;
+}
+
+.card a {
+  text-decoration: none;
+}
+.card a:hover {
+  opacity: 0.8;
+}
+.card h3,
+.card p {
+  margin: 0;
+}
+.social-link {
+  margin-top: 10px;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+.w-6 {
+  width: 1.5rem;
+}
+.info {
+	padding: 10px 20px;
+	margin: 5px;
+	background-color: rgb(245, 232, 157);
+	border-radius: 10px;
+	border: 1px solid gold;
+	box-shadow: 3px 3px 5px #eee;
+	font-size: .8em;
 }
