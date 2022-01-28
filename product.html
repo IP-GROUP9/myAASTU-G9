@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="style/index.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
 
 <body>
     <!-- Navigation bar -->
-    <table width="100%">
+    <table width="100%" id="navigation_footer">
         <tr>
             <td width="10%"></td>
             <td>
@@ -34,26 +35,25 @@
         <!-- main body -->
         <tr>
             <td width="10%"></td>
-            <h3 colspan="2" align="center">The variety of places we can find products and services.</h3>
-            <hr colspan="2">
-            <td width="40%">
+            <h3 colspan="2" align="center" style="color: rgb(33, 151, 112">The variety of places we can find products and services.</h3>
 
-                <ul>
+            <td width="40%">
+                <ul class="remove-dot">
                     <li>
-                        <a href="#TL"><img src="images/injera.png" width="10%"></a>Teacher's Lounge
+                        <a href="#TL"><img src="images/injera.png" class="product-img"></a>Teacher's Lounge
                     </li>
                     <li>
-                        <a href="#KNL"><img src="images/injera1.png" width="10%"></a>Kibnesh Lounge
+                        <a href="#KNL"><img src="images/injera1.png" class="product-img"></a>Kibnesh Lounge
                     </li>
                 </ul>
             </td>
             <td>
-                <ul>
+                <ul class="remove-dot">
 
                     <li>
-                        <a href="#KK"><img src="images/rice.png" width="10%"></a>KK</li>
+                        <a href="#KK"><img src="images/rice.png" class="product-img"></a>KK</li>
                     <li>
-                        <a href="#JH"><img src="images/juice.png" width="10%"></a>Juice House</li>
+                        <a href="#JH"><img src="images/juice.png" class="product-img"></a>Juice House</li>
 
                 </ul>
             </td>
@@ -62,7 +62,7 @@
         <tr>
             <td width="10%"></td>
             <td width="40%" colspan="2">
-                <hr size="5" color="lightblue">
+
                 <div id="TL" name="TL">
                     <h1>Teacher's Lounge</h1>
                     <p>It gives the best service and the wide variety food makes it one of the best in the compound. Students are allowed in during all the open hours except at <abbr title="only open for the staffs">6:00-8:00 </abbr>L.T. Open till 4:00PM.
@@ -77,8 +77,9 @@
                                 <details>
                                     <summary>Breakfast</summary>
 
-                                    <ul>
-                                        <table width="80%">
+
+                                    <ul class="remove-dot">
+                                        <table width="80%" class="product-back-img1">
                                             <td width="40%">
                                                 <p>Food</p>
                                                 <li>Yesinde Kinche</li>
@@ -107,8 +108,8 @@
 
                                     <summary>Lunch and Dinner</summary>
 
-                                    <ul>
-                                        <table width="80%">
+                                    <ul class="remove-dot">
+                                        <table width="80%" class="product-back-img1">
                                             <td width="40%">
                                                 <p>Food</p>
                                                 <li>Ater kik</li>
@@ -137,9 +138,9 @@
 
                     <p>
                         <a href="https://www.google.com/maps/dir//''/@8.8834109,38.8098411,549m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x164b79cdb6c1b8e3:0xc1e4e44076646a6d!2m2!1d38.8116876!2d8.8839953!3e2?hl=en-US">
-                            <button>Press</button></a> to go to Teacher's Lounge.</p>
+                            <button class="button" valign="center"><span>Press</span></button></a> to go to Teacher's Lounge.</p>
                 </div>
-                <hr size="5" color="lightblue">
+
                 <div id="KNL" name="KNL">
                     <h1>Kibnesh Lounge</h1>
                     <p>Being near to the learning classes it is the one of the best choice for the studnets. Students are allowed to eat during all the open hours. Open till 4:00PM L.T.
@@ -152,8 +153,8 @@
                                 <details>
 
                                     <summary>Breakfast</summary>
-                                    <ul>
-                                        <table width="80%">
+                                    <ul class="remove-dot">
+                                        <table width="80%" class="product-back-img2">
                                             <td width="40%">
                                                 <p>Food</p>
                                                 <li>Ful</li>
@@ -180,27 +181,28 @@
 
                                 <details>
                                     <summary>Lunch and Dinner</summary>
-
-                                    <table width="80%">
-                                        <td width="40%">
-                                            <p>Food</p>
-                                            <li>Key Wet</li>
-                                            <li>Minchet</li>
-                                            <li>Misto</li>
-                                            <li>Misr</li>
-                                            <li>Timatim Lebleb</li>
-                                            <li>Tegabino</li>
-                                        </td>
-                                        <td width="40%">
-                                            <p>Price</p>
-                                            <li>33</li>
-                                            <li>33</li>
-                                            <li>33</li>
-                                            <li>25</li>
-                                            <li>25</li>
-                                            <li>26</li>
-                                        </td>
-                                    </table>
+                                    <ul class="remove-dot">
+                                        <table width="80%" class="product-back-img2">
+                                            <td width="40%">
+                                                <p>Food</p>
+                                                <li>Key Wet</li>
+                                                <li>Minchet</li>
+                                                <li>Misto</li>
+                                                <li>Misr</li>
+                                                <li>Timatim Lebleb</li>
+                                                <li>Tegabino</li>
+                                            </td>
+                                            <td width="40%">
+                                                <p>Price</p>
+                                                <li>33</li>
+                                                <li>33</li>
+                                                <li>33</li>
+                                                <li>25</li>
+                                                <li>25</li>
+                                                <li>26</li>
+                                            </td>
+                                        </table>
+                                    </ul>
                                 </details>
                             </td>
                         </tr>
@@ -208,17 +210,17 @@
 
                     <p>
                         <a href="https://www.google.com/maps/dir//''/@8.8862922,38.7756544,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x164b837c09dee131:0x77bdd22985b0bba3!2m2!1d38.8105609!2d8.8862882!3e2?hl=en-US">
-                            <button>press</button></a> to go to Kibnesh Lounge.</p>
+                            <button class="button" valign="center"><span>Press</span></button></a> to go to Kibnesh Lounge.</p>
                 </div>
-                <hr size="5" color="lightblue">
+
                 <div id="KK" name="KK">
                     <h1>KK</h1>
                     <p>KK is know for its fast foods and juices.Open till 4:30PM L.T.
                     </p>
                     <details>
                         <summary>The daily menu is:</summary>
-                        <ul>
-                            <table width="80%">
+                        <ul class="remove-dot">
+                            <table width="80%" class="product-back-img3">
                                 <td width="40%">
                                     <p>Food And Drinks</p>
                                     <li>Pancake</li>
@@ -245,17 +247,17 @@
                     </details>
                     <p>
                         <a href="https://www.google.com/maps/dir//8.8870966,38.8102242/@8.8958205,38.7907551,13088m/data=!3m2!1e3!4b1!4m2!4m1!3e2?hl=en-US">
-                            <button>press</button></a> to go to KK.</p>
+                            <button class="button" valign="center"><span>Press</span></button></a> to go to KK.</p>
                 </div>
-                <hr size="5" color="lightblue">
+
                 <div id="JH" name="JH">
                     <h1>Juice House</h1>
                     <p>Juice house is a place to have fast food and juices.Open till 4:30PM L.T.
                     </p>
                     <details>
                         <summary>The daily menu is:</summary>
-                        <ul>
-                            <table width="80%">
+                        <ul class="remove-dot">
+                            <table width="80%" class="product-back-img4">
                                 <td width="40%">
                                     <p>Food And Drinks</p>
                                     <li>Pancake</li>
@@ -282,7 +284,7 @@
                     </details>
                     <p>
                         <a href="https://www.google.com/maps/dir//8.887126,38.8102957/@8.8869657,38.8100172,98m/data=!3m1!1e3!4m2!4m1!3e2?hl=en-US">
-                            <button>press</button></a> to go to Juice House.</p>
+                            <button class="button" valign="center"><span>Press</span></button></a> to go to Juice House.</p>
                 </div>
             </td>
             <td width="20%" valign="top">
@@ -296,14 +298,14 @@
             <td width="10%"></td>
         </tr>
         <!-- footer -->
-        <tr>
+        <tr id="navigation_footer">
             <td width="10%"></td>
             <td align="center" colspan="2">
-                <hr>
-               <footer>
-                     <a href="about.html">About Us</a> |
-                     <a href="contact.html">Contact Info</a> <br> &copy;2022 myAASTU
-               </footer>
+
+                <footer>
+                    <a href="about.html">About Us</a> |
+                    <a href="contact.html">Contact Info</a> <br> &copy;2022 myAASTU
+                </footer>
             </td>
             <td width="10%"></td>
         </tr>
