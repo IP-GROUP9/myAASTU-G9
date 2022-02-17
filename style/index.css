@@ -1,368 +1,424 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,900;1,300;1,400&display=swap");
 
+* {
+	box-sizing: border-box;
+}
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #eee;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
+	font-family: "Poppins", sans-serif;
+	background-color: #ddd;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
 }
 
 h1,
 h2,
 h3 {
-  color: #2f2faa;
+	color: #2f2faa;
+	margin-bottom: 0;
 }
 
-.image-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.image-container img {
-  max-width: 460px;
-  margin: 10px;
-  box-shadow: #999 4px 4px 5px;
-  border-radius: 5px;
-  transition-delay: 10ms;
-  transition-duration: 250ms;
-}
-
-.image-container img:hover {
-  transition-delay: 100ms;
-  transition-property: transform, box-shadow, position;
-  transition-duration: 500ms;
-  transform: scale(1.05) rotate(1deg);
-  box-shadow: #ccc 4px 4px 5px, #ccc -4px -4px 5px;
-}
-
-main {
-  min-height: calc(100vh - 206px);
+.subtitle {
+	margin-top: 0;
 }
 
 .container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px 10px;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 20px 10px;
 }
-footer {
-  background-color: #3f3ff2;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 304 304' width='304' height='304'%3E%3Cpath fill='%23d6d6f2' fill-opacity='0.4' d='M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 1 1 2 0zm16 16V64h46v2h-48V37.9a5 5 0 1 1 2 0zm-128 96V208h16v12.1a5 5 0 1 1-2 0V210h-16v-76.1a5 5 0 1 1 2 0zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 1 1 0-2H96v-42.1a5 5 0 1 1 2 0zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 1 1 0-2H80V64h32V37.9a5 5 0 1 1 2 0zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 1 1 2 0zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.51L175.59 80H224V21.9a5 5 0 1 1 2 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 1 1-2 0v-99.51L184.59 96H300.1a5 5 0 0 1 3.9-3.9v2.07a3 3 0 0 0 0 5.66v2.07a5 5 0 0 1-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 1 1-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 1 1 0 2H0v-65.41l48-48V53.9a5 5 0 1 1 2 0zm-16 16V89.41l-34 34v-2.82l32-32V69.9a5 5 0 1 1 2 0zM12.1 32a5 5 0 1 1 0 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 1 1 0-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.59L40.59 194H21.9a5 5 0 1 1 0-2H41.41L66 216.59V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.6L56.6 162H37.9a5 5 0 1 1 0-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.59L48.59 178H21.9a5 5 0 1 1 0-2H49.41L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 0 1 3.9 3.9H3.83A3 3 0 0 0 0 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 0 1 6 97a5 5 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 0 0-5.66 0h-2.07a5 5 0 0 1 9.8 0zM5.9 0A5.02 5.02 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0h2.07A3 3 0 0 0 304 3.83V5.9a5 5 0 0 1-3.9-5.9zm3.9 300.1v2.07a3 3 0 0 0-1.83 1.83h-2.07a5 5 0 0 1 3.9-3.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'%3E%3C/path%3E%3C/svg%3E");
+
+main.container {
+	margin-top: 80px;
+	min-height: calc(100vh - 159px);
 }
+
 footer {
-  text-align: center;
-  background-color: rgb(185, 174, 252);
-  border-top: 3px solid rgb(129, 111, 243);
+	background-color: #3f3ff2;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 304 304' width='304' height='304'%3E%3Cpath fill='%23d6d6f2' fill-opacity='0.4' d='M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 1 1 2 0zm16 16V64h46v2h-48V37.9a5 5 0 1 1 2 0zm-128 96V208h16v12.1a5 5 0 1 1-2 0V210h-16v-76.1a5 5 0 1 1 2 0zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 1 1 0-2H96v-42.1a5 5 0 1 1 2 0zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 1 1 0-2H80V64h32V37.9a5 5 0 1 1 2 0zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 1 1 2 0zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.51L175.59 80H224V21.9a5 5 0 1 1 2 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 1 1-2 0v-99.51L184.59 96H300.1a5 5 0 0 1 3.9-3.9v2.07a3 3 0 0 0 0 5.66v2.07a5 5 0 0 1-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 1 1-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 1 1 0 2H0v-65.41l48-48V53.9a5 5 0 1 1 2 0zm-16 16V89.41l-34 34v-2.82l32-32V69.9a5 5 0 1 1 2 0zM12.1 32a5 5 0 1 1 0 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 1 1 0-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.59L40.59 194H21.9a5 5 0 1 1 0-2H41.41L66 216.59V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.6L56.6 162H37.9a5 5 0 1 1 0-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.59L48.59 178H21.9a5 5 0 1 1 0-2H49.41L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 0 1 3.9 3.9H3.83A3 3 0 0 0 0 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 0 1 6 97a5 5 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 0 0-5.66 0h-2.07a5 5 0 0 1 9.8 0zM5.9 0A5.02 5.02 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0h2.07A3 3 0 0 0 304 3.83V5.9a5 5 0 0 1-3.9-5.9zm3.9 300.1v2.07a3 3 0 0 0-1.83 1.83h-2.07a5 5 0 0 1 3.9-3.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'%3E%3C/path%3E%3C/svg%3E");
+	text-align: center;
+	background-color: rgb(185, 174, 252);
+	border-top: 3px solid rgb(129, 111, 243);
 }
 
 footer a {
-  color: blue;
-}
-.gallary-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-.pagination a svg{
-  fill: #4d4de4;
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-.pagination a svg:hover {
-  fill: #24248a;
-  transform: scale(1.1);
+	color: blue;
 }
 
 nav {
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-  background-color: rgba(255, 255, 255, 0.911);
-  box-shadow: #999 3px 3px 6px;
-  border-top: 5px solid rgb(185, 174, 252);
-  z-index: 5;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.911);
+	box-shadow: #ccc 3px 3px 6px;
+	border-top: 5px solid rgb(185, 174, 252);
+	z-index: 5;
+	height: 80px;
 }
 
 nav .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0;
 }
-main.container {
-  margin-top: 80px;
-}
+
 .logo,
 .links {
-  display: inline-block;
+	display: inline-block;
 }
-/* .links {
-  overflow-x: scroll;
-} */
+.logo button {
+	display: none;
+}
+
 .links a {
-  margin: 0 1px;
-  text-decoration: none;
-  text-transform: capitalize;
-  color: blue;
-  padding: 5px;
-  border-radius: 3px;
+	margin: 0 1px;
+	text-decoration: none;
+	font-size: 18px;
+	text-transform: capitalize;
+	color: blue;
+	padding: 5px;
+	display: inline-block;
+	border-radius: 3px;
 }
 .links a:hover {
-  color: rgb(11, 11, 143);
+	background-color: #dedef5;
+	color: rgb(11, 11, 143);
 }
 .links a.active {
-  border-bottom: 3px solid blue;
+	border-bottom: 3px solid blue;
 }
 
 /* Events */
 .event-card {
-  background-color: white;
-  box-shadow: #999 3px 3px 6px;
-  border-radius: 5px;
-  padding-left: 0;
-  display: flex;
-  margin: 15px 0;
+	background-color: white;
+	box-shadow: #999 3px 3px 6px;
+	border-radius: 5px;
+	padding-left: 0;
+	display: flex;
+	margin: 15px 0;
 }
 .event-card img {
-  display: block;
-  max-width: 300px;
+	display: block;
+	max-width: 300px;
 }
 .event-card div {
-  padding: 15px;
+	padding: 15px;
 }
 .event-title {
-  font-weight: bold;
-  font-size: x-large;
-  margin-bottom: 0;
-  line-height: normal;
+	font-weight: bold;
+	font-size: x-large;
+	margin-bottom: 0;
+	line-height: normal;
 }
 .event-presenter {
-  margin-top: 0;
-  color: #999;
+	margin-top: 0;
+	color: #999;
 }
-@media (max-width: 400px) {
-  .links {
-    display: none;
-  }
+@media (max-width: 500px) {
+	nav .logo button {
+		display: block;
+		margin-right: 10px;
+		padding: 5px;
+		background-color: inherit;
+		border-width: 0;
+		border-radius: 5px;
+	}
+	nav .logo button:hover {
+		background-color: #f3f3f5;
+	}
+	.event-card {
+		flex-direction: column;
+	}
+	.event-card img {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	nav .container {
+		flex-direction: column;
+		align-items: start;
+			background-color:white;
+
+	}
+	.links {
+		width: 100%;
+		display: none;
+		transition: display ease 6s;
+	}
+	.links a {
+		display: block;
+		padding: 10px 20px;
+	}
+	nav .logo {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.links a:hover {
+		background-color: #eaeafa;
+	}
+
+	.links a.active {
+		border-width: 0;
+		background-color: #dedef5;
+	}
 }
 
 .top {
-  position: fixed;
-  bottom: 20px;
-  border-radius: 50%;
-  background-color: blue;
-  color: white;
-  text-decoration: none;
-  width: 45px;
-  height: 45px;
-  font-size: 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	position: fixed;
+	bottom: 20px;
+	border-radius: 50%;
+	background-color: blue;
+	color: white;
+	text-decoration: none;
+	width: 45px;
+	height: 45px;
+	font-size: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .top:hover {
-  background-color: rgba(122, 122, 129, 0.849);
-  transform: scale(1.1);
+	background-color: rgba(122, 122, 129, 0.849);
+	transform: scale(1.1);
 }
 .product-img {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 50px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+	width: 50px;
 }
 
 .product-img:hover {
-  box-shadow: 0 0 2px 1px rgba(8, 7, 80, 0.5);
+	box-shadow: 0 0 2px 1px rgba(8, 7, 80, 0.5);
 }
 
 .button {
-  display: inline-block;
-  border-radius: 2px;
-  background-color: transparent;
-  border: none;
-  color: #773774;
-  text-align: center;
-  font-size: 14px;
-  padding: 10px;
-  width: 100px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 2.5px;
+	display: inline-block;
+	border-radius: 2px;
+	background-color: transparent;
+	border: none;
+	color: #773774;
+	text-align: center;
+	font-size: 14px;
+	padding: 10px;
+	width: 100px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 2.5px;
 }
 
 .button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
 }
 
 .button span:after {
-  content: "\00bb";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+	content: "\00bb";
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
 }
 
 .button:hover span {
-  padding-right: 25px;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	padding-right: 25px;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+		0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .button:hover span:after {
-  opacity: 1;
-  right: 0;
+	opacity: 1;
+	right: 0;
 }
 
 ul.remove-dot {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 .product-back-img1 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: relative;
-  font-weight: bold;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+	font-weight: bold;
 }
 
 .product-back-img1::after {
-  content: "";
-  background: url(../images/injera.png);
-  background-size: cover;
-  opacity: 0.2;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+	content: "";
+	background: url(../images/injera.png);
+	background-size: cover;
+	opacity: 0.2;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
 }
 
 .product-back-img2 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: relative;
-  font-weight: bold;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+	font-weight: bold;
 }
 
 .product-back-img2::after {
-  content: "";
-  background: url(../images/injera1.png);
-  background-size: cover;
-  opacity: 0.2;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+	content: "";
+	background: url(../images/injera1.png);
+	background-size: cover;
+	opacity: 0.2;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
 }
 
 .product-back-img3 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: relative;
-  font-weight: bold;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+	font-weight: bold;
 }
 
 .product-back-img3::after {
-  content: "";
-  background: url(../images/rice.png);
-  background-size: contain;
-  opacity: 0.2;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+	content: "";
+	background: url(../images/rice.png);
+	background-size: contain;
+	opacity: 0.2;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
 }
 
 .product-back-img4 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: relative;
-  font-weight: bold;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+	font-weight: bold;
 }
 
 .product-back-img4::after {
-  content: "";
-  background: url(../images/juice.png);
-  background-size: contain;
-  opacity: 0.2;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+	content: "";
+	background: url(../images/juice.png);
+	background-size: contain;
+	opacity: 0.2;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
 }
 
 .location-img {
-  border-radius: 10px;
-  margin: 10px;
-  box-shadow: 4px 8px 10px #ccc,
-    0 6px 20px 0 #ccc;
+	border-radius: 10px;
+	margin: 10px;
+	box-shadow: 4px 8px 10px #ccc, 0 6px 20px 0 #ccc;
 }
 
 area {
 	border: 5px solid #4d4de4;
 	border-radius: 10px;
 }
+/* Gallary */
+
+.image-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.image-container img {
+	max-width: 460px;
+	margin: 10px;
+	box-shadow: #999 4px 4px 5px;
+	border-radius: 5px;
+	transition-delay: 10ms;
+	transition-duration: 250ms;
+}
+
+.image-container img:hover {
+	transition-delay: 100ms;
+	transition-property: transform, box-shadow, position;
+	transition-duration: 500ms;
+	transform: scale(1.05) rotate(1deg);
+	box-shadow: #ccc 4px 4px 5px, #ccc -4px -4px 5px;
+}
+.gallary-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.pagination a svg {
+	fill: #4d4de4;
+	text-decoration: none;
+	margin: 0 5px;
+}
+
+.pagination a svg:hover {
+	fill: #24248a;
+	transform: scale(1.1);
+}
 /* about us cards */
 .card-conatiner {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
 }
 .card {
-  display: inline-block;
-  margin: 10px 5px;
-  flex: 1;
-  padding: 10px;
-  max-width: 400px;
-  min-width: 300px;
-  box-shadow: #ddd 3px 3px 6px;
-  border-radius: 5px;
-  border: 1px solid #eee;
-  background-color: white;
+	display: inline-block;
+	margin: 10px 5px;
+	flex: 1;
+	padding: 10px;
+	max-width: 400px;
+	min-width: 300px;
+	box-shadow: #ddd 3px 3px 6px;
+	border-radius: 5px;
+	border: 1px solid #eee;
+	background-color: white;
 }
 .card h3 {
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #3f3ff2;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #3f3ff2;
 }
 
 .card a {
-  text-decoration: none;
+	text-decoration: none;
 }
 .card a:hover {
-  opacity: 0.8;
+	opacity: 0.8;
 }
 .card h3,
 .card p {
-  margin: 0;
+	margin: 0;
 }
 .social-link {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 
 .h-6 {
-  height: 1.5rem;
+	height: 1.5rem;
 }
 .w-6 {
-  width: 1.5rem;
+	width: 1.5rem;
 }
 .info {
 	padding: 10px 20px;
@@ -371,5 +427,5 @@ area {
 	border-radius: 10px;
 	border: 1px solid gold;
 	box-shadow: 3px 3px 5px #eee;
-	font-size: .8em;
+	font-size: 0.8em;
 }
