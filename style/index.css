@@ -165,6 +165,11 @@ nav .container {
 		border-width: 0;
 		background-color: #dedef5;
 	}
+
+	/* gallary */
+	.image-container img {
+		max-width: 300px;
+	}
 }
 
 .top {
@@ -346,7 +351,7 @@ area {
 }
 
 .image-container img {
-	max-width: 460px;
+	max-width: 430px;
 	margin: 10px;
 	box-shadow: #999 4px 4px 5px;
 	border-radius: 5px;
@@ -428,4 +433,16 @@ area {
 	border: 1px solid gold;
 	box-shadow: 3px 3px 5px #eee;
 	font-size: 0.8em;
+}
+
+.title {
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.subtitle {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 1em;
+	color: #777;
 }
