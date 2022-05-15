@@ -2,34 +2,12 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<?php include("head.php"); ?>
 	<title>myAASTU - Location</title>
-	<script src="js/index.js"></script>
-	<link rel="stylesheet" href="style/index.css">
 </head>
 
 <body>
-	<!-- Navigation bar -->
-	<nav>
-		<div class="container">
-			<div class="logo">
-				<a href="/">
-					<img height="70px" src="images/logo.png" alt="myAASTU logo">
-				</a>
-				<button onclick="toggleNav()"><img src="images/icons/menu.svg" class="w-6 h-6" alt=""></button>
-			</div>
-			<div class="links">
-				<a href="/">Home</a>
-				<a href="gallary1.html">Gallery</a>
-				<a href="event.html">Events</a>
-				<a href="location.html" class="active">Location</a>
-				<a href="product.html">Services</a>
-				<a href="about_aastu.html">About AASTU</a>
-			</div>
-		</div>
-	</nav>
+	<?php include('nav.php'); ?>
 	<!-- main body -->
 	<main class="container">
 		<h1>Location</h1>
@@ -115,10 +93,6 @@
         </ul>
     </p>
     </details>	
-        
-
-		
-
 		<h2 id="c">Lounges Block (41-43, 49 and 52-53)</h2>
 		<details><ul>
 			<li>
@@ -295,7 +269,6 @@
                       </ul>
                       
                       
-                      
                        
 
 
@@ -324,13 +297,7 @@
             </ul>
 		</p></details>
 	</main>
-	<!-- footer -->
-	<footer>
-		<div class=" container">
-			
-			<a href="contact.html">Contact Info</a> <br> &copy;2022 myAASTU
-		</div>
-	</footer>
+	<?php include('footer.php'); ?>
 </body>
 
 </html>

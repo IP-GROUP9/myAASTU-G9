@@ -2,37 +2,12 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="index.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include("head.php"); ?>
     <title>myAASTU - Home</title>
-    <script src="js/index.js"></script>
-    <link rel="stylesheet" href="style/index.css">
 </head>
 
 <body>
-
-    <!-- Navigation bar -->
-    <nav>
-        <div class="container">
-            <div class="logo">
-                <a href="/">
-                    <img height="70px" src="images/logo.png" alt="myAASTU logo">
-                </a>
-                <button onclick="toggleNav()"><img src="images/icons/menu.svg" class="w-6 h-6" alt=""></button>
-
-            </div>
-            <div class="links">
-                <a href="/" class="active">Home</a>
-                <a href="gallary1.html">Gallery</a>
-                <a href="event.html">Events</a>
-                <a href="location.html">Location</a>
-                <a href="product.html">Services</a>
-                <a href="about_aastu.html">About AASTU</a>
-            </div>
-        </div>
-    </nav>
+    <?php include('nav.php'); ?>
     <main class="container">
         <!-- main body -->
         <h1>Explore <abbr title="Addis Ababa Science and Technology University">AASTU</abbr> using this accessible and interactive site </h1>
@@ -44,7 +19,7 @@
         <video controls width="80%" id="video">
 			<source src="videos/view.mp4" type="video/mp4">
 		</video>
-        <h1 id="headers">BLOGS</h1>
+        <h1 id="headers">Posts</h1>
         <h2>Time Management Tips</h2>
         <p> To Do Lists are one of the most effective ways to stay on track. Record all the things you need to accomplish then focus on completing one task at a time. Don't forget to reward...<a href="articles/time_mgt.html">read
 				more</a>
@@ -54,14 +29,7 @@
             Addis Ababa Science and Technology University is recognized in Africa...<a href="articles/why_join_aastu.html"> read more</a>
         </p>
     </main>
-    <!-- footer -->
-    <footer>
-        <div class="container">
-
-            <a href="contact.html">Contact Info</a> <br> &copy;2022 myAASTU
-        </div>
-    </footer>
-
+    <?php include('footer.php'); ?>
 </body>
 
 </html>

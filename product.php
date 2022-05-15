@@ -2,34 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include("head.php"); ?>
     <title>myAASTU - Products and Services</title>
-    <script src="js/index.js"></script>
-    <link rel="stylesheet" href="style/index.css">
 </head>
 
 <body>
-    <!-- Navigation bar -->
-    <nav>
-        <div class="container">
-            <div class="logo">
-                <a href="/">
-                    <img height="70px" src="images/logo.png" alt="myAASTU logo">
-                </a>
-                <button onclick="toggleNav()"><img src="images/icons/menu.svg" class="w-6 h-6" alt=""></button>
-            </div>
-            <div class="links">
-                <a href="/">Home</a>
-                <a href="gallary1.html">Gallery</a>
-                <a href="event.html">Events</a>
-                <a href="location.html">Location</a>
-                <a href="product.html" class="active">Services</a>
-                <a href="about_aastu.html">About AASTU</a>
-            </div>
-        </div>
-    </nav>
+    <?php include("nav.php"); ?>
     <!-- main body -->
     <main class="container">
         <h1>Product and services.</h1>
@@ -268,13 +246,7 @@
             <li><a href="articles/time_mgt.html">Time management Tips</a></li>
         </ul>
     </main>
-    <!-- footer -->
-    <footer>
-        <div class=" container">
-
-            <a href="contact.html">Contact Info</a> <br> &copy;2022 myAASTU
-        </div>
-    </footer>
+    <?php include("footer.php"); ?>
 </body>
 
 </html>
