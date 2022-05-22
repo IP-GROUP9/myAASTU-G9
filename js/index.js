@@ -11,3 +11,21 @@ function toggleNav() {
         links.style.display = "block";
     }
 }
+
+function toggleDropdown() {
+    document.getElementById("my-dropdown").classList.toggle("is-active");
+  }
+  
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropdown-btn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-body");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('is-active')) {
+          openDropdown.classList.remove('is-active');
+        }
+      }
+    }
+} 
+  

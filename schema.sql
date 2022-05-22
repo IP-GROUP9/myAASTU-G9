@@ -11,6 +11,7 @@ CREATE TABLE user (
     id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(80) UNIQUE NOT NULL,
     email VARCHAR(80) UNIQUE NOT NULL,
+    profile_pic VARCHAR(255) DEFAULT 'https://picsum.photos/400/250';
     password VARCHAR(80) NOT NULL
 );
 
@@ -20,5 +21,6 @@ CREATE TABLE post (
     created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     title VARCHAR(255) NOT NULL,
     body TEXT NOT NULL,
+    profile_pic VARCHAR(80) DEFAULT '/images/profile/placeholder.png',
     FOREIGN KEY (author_id) REFERENCES user (id)
 );

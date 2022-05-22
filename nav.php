@@ -18,14 +18,16 @@
 			<a class="nav-link" href="product.php">Services</a>
 			<a class="nav-link" href="about_aastu.php">About AASTU</a>
 			<?php
-			if (isset($_SESSION['username'])) {
+			if (isset($_SESSION['user'])) {
+				$user = $_SESSION['user'];
 			?>
-      <a href="logout.php">
-        <button>
-          @<?= $_SESSION['username'] ?>
-          Log Out
-        </button>
-      </a>
+			<div class="dropdown">
+				<img src="<?=$user['profile_pic']?>" alt="profile pic" class="profile-pic dropdown-btn" onclick="toggleDropdown()">
+				<div id="my-dropdown" class="dropdown-body">
+					<a href="reset_password.php">reset password</a>
+					<a href="logout.php">Log out</a>
+				</div>
+			</div>
 			<?php
 
 			} else { ?>

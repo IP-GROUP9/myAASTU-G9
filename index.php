@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,17 +7,16 @@
 
 <body>
     <?php include('nav.php'); ?>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Explore <abbr title="Addis Ababa Science and Technology University">AASTU</abbr></h1>
+            <h2>using this accessible and interactive site</h2>
+            <p>Adapting to new environment is always difficult for new students. We are here to help you navigate and explore this environment by providing all information you need to know about AASTU.
+            </p>
+            <a href="about_aastu.html"><button id="cta"><span>Explore AASTU</span></button></a>
+        </div>
+    </div> 
     <main class="container">
-        <!-- main body -->
-        <h1>Explore <abbr title="Addis Ababa Science and Technology University">AASTU</abbr> using this accessible and interactive site </h1>
-        <p>AASTU is currently working on the develepment of a safe and a natural environment in addition to giving quality education. Natural Environment is one of the main factors for a healthy interaction of students and a healthy mind. AASTU is a renowned
-            university in Ethiopia capable of admitting more than a thousand students each year.
-        </p>
-        <a href="about_aastu.html"><button>Explore AASTU</button></a>
-        <br>
-        <video controls width="80%" id="video">
-			<source src="videos/view.mp4" type="video/mp4">
-		</video>
         <h1 id="headers">Posts</h1>
         <h2>Time Management Tips</h2>
         <p> To Do Lists are one of the most effective ways to stay on track. Record all the things you need to accomplish then focus on completing one task at a time. Don't forget to reward...<a href="articles/time_mgt.html">read
