@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
     <?php include('head.php') ?> 
-    <title>Log In - myAASTU</title>
+    <title>Control DataBase</title>
 </head>
 <body>
     <?php include('nav.php');?>
