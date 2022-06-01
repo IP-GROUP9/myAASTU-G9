@@ -26,7 +26,6 @@ CREATE TABLE post (
     profile_pic VARCHAR(80) DEFAULT '/images/profile/placeholder.png',
     FOREIGN KEY (author_id) REFERENCES user (id)
 );
-<<<<<<< Updated upstream
 CREATE TABLE events (
     id int(11) PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
@@ -42,9 +41,3 @@ CREATE TABLE events (
     imageName VARCHAR(128) NOT NULL,
     imgDir VARCHAR(128) NOT NULL
 );
-=======
-
-
-
-
->>>>>>> Stashed changes
