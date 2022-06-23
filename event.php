@@ -1,14 +1,14 @@
-<?php include('utils/init.php') ?>
+<?php include_once('utils/init.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<?php include("head.php"); ?>
+	<?php include_once("head.php"); ?>
 	<title>Events</title>
 </head>
 
 <body>
-	<?php include("nav.php"); ?>
+	<?php include_once("nav.php"); ?>
 	<span id="top"></span>
 	<main class="container">
 		<a href="#top" class="top">&uarr;</a>
@@ -129,7 +129,7 @@
 		</ul>
 	</main>
 
-	<?php include("footer.php"); ?>
+	<?php include_once("footer.php"); ?>
 
 </body>
 

@@ -1,14 +1,14 @@
-<?php include('utils/init.php') ?>
+<?php include_once('utils/init.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<?php include("head.php"); ?>
+	<?php include_once("head.php"); ?>
 	<title>myAASTU - Location</title>
 </head>
 
 <body>
-	<?php include('nav.php'); ?>
+	<?php include_once('nav.php'); ?>
 	<!-- main body -->
 	<main class="container">
 		<h1>Location</h1>
@@ -298,7 +298,7 @@
             </ul>
 		</p></details>
 	</main>
-	<?php include('footer.php'); ?>
+	<?php include_once('footer.php'); ?>
 </body>
 
 </html>

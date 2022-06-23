@@ -1,21 +1,21 @@
-<?php include('utils/init.php') ?>
+<?php include_once('utils/init.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <?php include("head.php"); ?>
+    <?php include_once("head.php"); ?>
     <title>myAASTU - Home</title>
 </head>
 
 <body>
-    <?php include('nav.php'); ?>
+    <?php include_once('nav.php'); ?>
     <?php
-    include("lib/parsedown-1.7.4/Parsedown.php");
+    include_once("lib/parsedown-1.7.4/Parsedown.php");
     $parsedown = new Parsedown;
     $parsedown->setSafeMode(true);
 
     if (isset($_REQUEST['post_id'])) {
-        include('utils/posts.php');
+        include_once('utils/posts.php');
         $post = get_post($_REQUEST['post_id']);
         $title = $post['title'];
         $id = $post['id'];
@@ -44,7 +44,7 @@
     }
     ?>
     </main>
-    <?php include('footer.php'); ?>
+    <?php include_once('footer.php'); ?>
 </body>
 
 </html>

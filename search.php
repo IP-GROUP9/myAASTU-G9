@@ -1,5 +1,5 @@
 <?php
-include("utils/db.php");
+include_once("utils/db.php");
 $q = $_REQUEST['q'];
 header("Content-Type: application/json");
 if (empty($q))

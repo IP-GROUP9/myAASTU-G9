@@ -1,13 +1,13 @@
-<?php include('utils/init.php') ?>
+<?php include_once('utils/init.php') ?>
 <html lang="en">
 
 <head>
-    <?php include("head.php"); ?>
+    <?php include_once("head.php"); ?>
     <title>myAASTU - Home</title>
 </head>
 
 <body>
-    <?php include('nav.php'); ?>
+    <?php include_once('nav.php'); ?>
     <div class="hero-image">
         <div class="hero-text">
             <h1>Explore <abbr title="Addis Ababa Science and Technology University">AASTU</abbr></h1>
@@ -18,9 +18,9 @@
         </div>
     </div>
     <main class="container">
-        <?php include('_posts.php') ?>
+        <?php include_once('_posts.php') ?>
     </main>
-    <?php include('footer.php'); ?>
+    <?php include_once('footer.php'); ?>
 </body>
 
 </html>

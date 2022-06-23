@@ -1,4 +1,4 @@
-<?php include('utils/init.php') ?>
+<?php include_once('utils/init.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<?php include('nav.php'); ?>
+	<?php include_once('nav.php'); ?>
 	<!-- main body -->
 	<main class="container">
 		<h1>Addis Ababa Science and Technology University(AASTU)</h1>
@@ -114,9 +114,9 @@
 			</tr>
 		</table>
 		<iframe width="100%" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Addis%20Ababa%20Science%20and%20Technology%20University&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-		<?php include('_posts.php') ?>
+		<?php include_once('_posts.php') ?>
 	</main>
-	<?php include('footer.php'); ?>
+	<?php include_once('footer.php'); ?>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+include_once('db.php');
 
 function create_post($title, $body, $author_id, $cover_pic)
 {

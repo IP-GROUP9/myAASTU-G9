@@ -62,7 +62,7 @@ nav {
 }
 
 nav .container {
-  text-align: center;
+  /* text-align: center; */
   display: flex;
   align-items: stretch;
   justify-content: space-between;

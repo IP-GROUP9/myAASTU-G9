@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+include_once('db.php');
 
 function getFrom($id, $column)
 {

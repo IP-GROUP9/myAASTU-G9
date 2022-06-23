@@ -1,16 +1,16 @@
-<?php include('utils/init.php') ?>
+<?php include_once('utils/init.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<?php include("head.php"); ?>
+	<?php include_once("head.php"); ?>
 	<title>myAASTU - contact us</title>
 </head>
 
 <body id="top">
 	<!-- Navigation bar -->
-	<?php include("nav.php"); ?>
+	<?php include_once("nav.php"); ?>
 	<main class="container">
 		<a href="#top" class="top">&uarr;</a>
 		<!-- main body -->
@@ -114,10 +114,10 @@
 				</div>
 			</div>
 		</div>
-        <?php include('_posts.php') ?>
+        <?php include_once('_posts.php') ?>
 	</main>
 
-	<?php include("footer.php"); ?>
+	<?php include_once("footer.php"); ?>
 
 </body>
 

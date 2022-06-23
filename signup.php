@@ -1,16 +1,16 @@
-<?php include('utils/init.php');
-include('utils/util.php') ?>
+<?php include_once('utils/init.php');
+include_once('utils/util.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <?php include('head.php') ?>
+    <?php include_once('head.php') ?>
     <title>Sign Up - myAASTU</title>
 </head>
 
 <body>
     <?php
-    include('nav.php');
+    include_once('nav.php');
     ?>
     <main class="container center">
         <div class="card form-card">
@@ -35,8 +35,8 @@ include('utils/util.php') ?>
                 <input type="submit" value="Sign Up">
             </form>
             <?php
-            include("utils/users.php");
-            include("utils/form.php");
+            include_once("utils/users.php");
+            include_once("utils/form.php");
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $error = '';
                 $username = $_POST['username'];
@@ -58,7 +58,7 @@ include('utils/util.php') ?>
                     if (!$user) {
                         $file = null;
                         if ($profile_pic['name'] != '') {
-                            $file = 'images/profile/' . basename($profile_pic['name']);
+                            $file = '/images/profile/' . basename($profile_pic['name']);
                             if (!move_uploaded_file($profile_pic['tmp_name'], $file))
                                 $error .= 'unable to upload file<br>';
                         }
@@ -77,7 +77,7 @@ include('utils/util.php') ?>
             ?>
         </div>
     </main>
-    <?php include('footer.php') ?>
+    <?php include_once('footer.php') ?>
 </body>
 
 </html>

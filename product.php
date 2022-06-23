@@ -1,4 +1,4 @@
-<?php include('utils/init.php');
+<?php include_once('utils/init.php');
 include "utils/db.php";
 include "utils/selectpro.php";
 // mysqli_close($conn);
@@ -7,12 +7,12 @@ include "utils/selectpro.php";
 <html lang="en">
 
 <head>
-    <?php include("head.php"); ?>
+    <?php include_once("head.php"); ?>
     <title>myAASTU - Products and Services</title>
 </head>
 
 <body>
-    <?php include("nav.php"); ?>
+    <?php include_once("nav.php"); ?>
     <!-- main body -->
     <main class="container">
         <h1>Product and services.</h1>
@@ -167,9 +167,9 @@ include "utils/selectpro.php";
                 </div>
             </details>
         </div>
-        <?php include('_posts.php') ?>
+        <?php include_once('_posts.php') ?>
     </main>
-    <?php include("footer.php"); ?>
+    <?php include_once("footer.php"); ?>
 </body>
 
 </html>

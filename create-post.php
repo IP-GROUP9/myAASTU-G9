@@ -1,10 +1,10 @@
 <?php
-include('utils/init.php');
+include_once('utils/init.php');
 if (!isset($_SESSION['user']))
     header('Location: login.php');
 
-include("utils/posts.php");
-include('utils/util.php');
+include_once("utils/posts.php");
+include_once('utils/util.php');
 $title = array_get($_REQUEST, 'title');
 $body = array_get($_REQUEST, 'body');
 $cover_pic = array_get($_FILES, 'cover_pic');
@@ -35,13 +35,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
     
     <head>
-        <?php include('head.php') ?>
+        <?php include_once('head.php') ?>
         <title>Create Post - myAASTU</title>
     </head>
     
     <body>
         <?php
-        include('nav.php');
+        include_once('nav.php');
     ?>
     <main class="container center">
         <div class="card form-card">
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     echo "<div class='error'>$error</div>"; ?>
             </form>
     </main>
-    <?php include('footer.php') ?>
+    <?php include_once('footer.php') ?>
 </body>
 
 </html>

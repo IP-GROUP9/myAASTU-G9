@@ -1,12 +1,12 @@
-<?php include('utils/init.php') ?>
+<?php include_once('utils/init.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include('head.php') ?>
-    <title>Rest Password - myAASTU</title>
+    <?php include_once('head.php') ?>
+    <title>Reset Password - myAASTU</title>
 </head>
 <body>
-    <?php include('nav.php') ?>
+    <?php include_once('nav.php') ?>
     <main class="container center">
         <div class="card form-card">
             <h1>Reset Password</h1>
@@ -17,7 +17,7 @@
                 <input type="submit" class="btn" value="change password">
             </form>
                 <?php
-                include("utils/users.php");
+                include_once("utils/users.php");
                 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $password = $_REQUEST['password'];
                     $password2 = $_REQUEST['password2'];
@@ -37,7 +37,7 @@
                 ?>
         </div>
     </main>
-    <?php include('footer.php') ?>
+    <?php include_once('footer.php') ?>
 </body>
 
 </html>

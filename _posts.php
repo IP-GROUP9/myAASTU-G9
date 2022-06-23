@@ -7,9 +7,9 @@
 
 <div class="posts">
     <?php
-    include('utils/posts.php');
-    include('utils/util.php');
-    include("lib/parsedown-1.7.4/Parsedown.php");
+    include_once('utils/posts.php');
+    include_once('utils/util.php');
+    include_once("lib/parsedown-1.7.4/Parsedown.php");
     $parsedown = new Parsedown;
     $parsedown->setSafeMode(true);
 

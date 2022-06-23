@@ -1,15 +1,15 @@
 
-<?php include 'pro_db.php'?>
+<?php include 'utils/db.php'?>
 <?php include 'admin.php'?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include('head.php') ?> 
+    <?php include_once('head.php') ?> 
     <title>Control DataBase</title>
 </head>
 <body>
-    <?php include('nav.php');?>
+    <?php include_once('nav.php');?>
     <main class="container">
 <?php
 if(isset($_SESSION['status']))
@@ -79,6 +79,6 @@ if(isset($_SESSION['status']))
     </details>
 
     </main>
-    <?php include('footer.php');?>
+    <?php include_once('footer.php');?>
 </body>
 </html>

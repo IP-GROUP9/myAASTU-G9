@@ -6,6 +6,7 @@ function validate_input($input)
 
 function validate_email($email) {
     $email = validate_input($email);
+    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
     return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 

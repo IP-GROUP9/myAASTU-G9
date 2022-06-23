@@ -1,12 +1,12 @@
-<?php include('utils/init.php');
+<?php include_once('utils/init.php');
 if (!isset($_SESSION['user']))
     header('Location: login.php');
 
 if (!isset($_REQUEST['post_id']))
     header('Location: /');
 
-include('utils/posts.php');
-include('utils/util.php');
+include_once('utils/posts.php');
+include_once('utils/util.php');
 
 
 $post = get_post($_REQUEST['post_id']);
@@ -45,13 +45,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
 
 <head>
-    <?php include('head.php') ?>
+    <?php include_once('head.php') ?>
     <title>Update Post - myAASTU</title>
 </head>
 
 <body>
     <?php
-    include('nav.php');
+    include_once('nav.php');
     $title = array_get($_REQUEST, 'title', $post['title']);
     $body = array_get($_REQUEST, 'body', $post['body']);
     ?>
@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="submit" value="Update Post">
             </form>
     </main>
-    <?php include('footer.php') ?>
+    <?php include_once('footer.php') ?>
 </body>
 
 </html>

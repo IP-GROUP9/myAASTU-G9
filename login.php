@@ -1,15 +1,15 @@
-<?php include("utils/init.php");
-include('utils/util.php'); ?>
+<?php include_once("utils/init.php");
+include_once('utils/util.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <?php include('head.php') ?>
+    <?php include_once('head.php') ?>
     <title>Log In - myAASTU</title>
 </head>
 
 <body>
-    <?php include('nav.php');
+    <?php include_once('nav.php');
     ?>
     <main class="container center">
         <div class="card form-card">
@@ -21,11 +21,11 @@ include('utils/util.php'); ?>
             <form method="post" autocomplete="off">
                 <input type="text" name="username" value="<?= array_get($_POST, 'username') ?>" placeholder="Username" required>
                 <input type="password" name="password" placeholder="Passowrd" required>
-                <a href="forgot-password">forgot password?</a>
+                <a href="forgot_password.php">forgot password?</a>
                 <input type="submit" value="Login">
             </form>
             <?php
-            include("utils/users.php");
+            include_once("utils/users.php");
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $username = $_REQUEST['username'];
                 $password = $_REQUEST['password'];
@@ -52,7 +52,7 @@ include('utils/util.php'); ?>
             ?>
         </div>
     </main>
-    <?php include('footer.php') ?>
+    <?php include_once('footer.php') ?>
 </body>
 
 </html>

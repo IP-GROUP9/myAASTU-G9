@@ -1,19 +1,19 @@
-<?php include('utils/init.php') ?>
+<?php include_once('utils/init.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <?php include("head.php"); ?>
+    <?php include_once("head.php"); ?>
     <title>AASTU Gallery</title>
 </head>
 
 <body>
-    <?php include("nav.php"); ?>
+    <?php include_once("nav.php"); ?>
     <!-- main body -->
     <main class="container">
         <div class="gallary-header">
             <h1>Gallery of AASTU</h1>
-            <?php include("pagination.php"); ?>
+            <?php include_once("pagination.php"); ?>
         </div>
         <div class="image-container">
             <?php
@@ -25,7 +25,7 @@
             <img src="images/entranceexam1.png" alt="students taking tests">
         </div>
     </main>
-    <?php include("footer.php"); ?>
+    <?php include_once("footer.php"); ?>
     <script src="js/siema.min.js"></script>
     <script>
         const s = new Siema({
