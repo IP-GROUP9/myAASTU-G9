@@ -1,3 +1,5 @@
+<?php include('utils/init.php');
+include('utils/util.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,12 +15,23 @@
     <main class="container center">
         <div class="card form-card">
             <h1>Sign Up</h1>
+            <div>
+                or
+                <a href="login.php" class="secondary-btn">already have account?</a>
+            </div>
             <form method="post" autocomplete="off" enctype="multipart/form-data">
-                <input type="text" value="<?= $_POST['username'] ?>" name="username" placeholder="Username" required>
-                <input type="text" value="<?= $_POST['email'] ?>" name="email" placeholder="Email" required>
+                <input type="text" value="<?= array_get($_POST, 'username') ?>" name="username" placeholder="Username" required>
+                <input type="text" value="<?= array_get($_POST, 'email') ?>" name="email" placeholder="Email" required>
                 <input type="password" name="password" minlength="8" placeholder="Passowrd" required>
                 <input type="hidden" name="MAX_FILE_SIZE" value="1200000"> <!-- max size 1.5 MB -->
-                <input type="file" name="profile_pic" accept="image/*">
+                <label class="upload-label">
+                    <input type="file" class="upload-button" name="profile_pic" accept="image/*"/>
+                        ⤒ 🗃 upload profile picture
+                </label>
+
+                <!-- <label for="profile_pic" class="upload-label">
+                    <input type="file" name="profile_pic" accept="image/*">
+                </label> -->
                 <input type="submit" value="Sign Up">
             </form>
             <?php

@@ -1,3 +1,4 @@
+<?php include('utils/init.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -112,14 +113,8 @@
 				<td>Addis Ababa</td>
 			</tr>
 		</table>
-		<iframe width="100%" height="400" id="gmap_canvas"
-			src="https://maps.google.com/maps?q=Addis%20Ababa%20Science%20and%20Technology%20University&t=&z=17&ie=UTF8&iwloc=&output=embed"
-			frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-		<h3>Posts</h3>
-		<ul>
-			<li><a href="articles/why_join_aastu.html">Top 5 reasons why you should join AASTU</a></li>
-			<li><a href="articles/time_mgt.html">Time management Tips</a></li>
-		</ul>
+		<iframe width="100%" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Addis%20Ababa%20Science%20and%20Technology%20University&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+		<?php include('_posts.php') ?>
 	</main>
 	<?php include('footer.php'); ?>
 </body>

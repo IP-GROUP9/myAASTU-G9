@@ -1,3 +1,4 @@
+<?php include('utils/init.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 

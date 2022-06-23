@@ -1,3 +1,4 @@
+<?php include('utils/init.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -240,11 +241,7 @@
                     <button class="button" valign="center"><span>Press</span></button></a> to go to Juice House.
             </p>
         </div>
-        <h3>Posts</h3>
-        <ul>
-            <li><a href="articles/why_join_aastu.html">Top 5 reasons why you should join AASTU</a></li>
-            <li><a href="articles/time_mgt.html">Time management Tips</a></li>
-        </ul>
+        <?php include('_posts.php') ?>
     </main>
     <?php include("footer.php"); ?>
 </body>

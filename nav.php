@@ -1,5 +1,4 @@
 <!-- Navigation bar -->
-<?php session_start(); ?>
 <nav>
 	<div class="container">
 		<div class="logo">
