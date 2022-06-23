@@ -70,6 +70,7 @@ nav .container {
 nav img {
   padding: 5px 0;
 }
+
 .logo,
 .links {
   display: flex;
@@ -257,7 +258,8 @@ nav img {
 }
 
 .product-img:hover {
-  box-shadow: 0 0 2px 1px rgba(8, 7, 80, 0.5);
+    box-shadow: 0 0 2px 1px rgba(8, 7, 80, 0.5);
+    transform: scale(1.1);
 }
 
 .button {
@@ -404,6 +406,7 @@ area {
 }
 
 /* Gallary */
+
 .image-container {
   height: 500px;
 }
@@ -525,6 +528,15 @@ area {
   margin-bottom: 10px;
   font-size: 1em;
   color: #777;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.subtitle {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #777;
 }
 
 #video {
@@ -813,4 +825,32 @@ h1 a {
 
 h1 a:hover {
   text-decoration: underline;
+}
+.login h1 {
+    margin-top: 0;
+}
+
+.form-container {
+    position: relative;
+    margin: 8% auto;
+    min-height: 60%;
+    width: 50%;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+    background: white;
+    padding: 0px 0px 5px 15px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.form-input {
+    display: block;
+    margin: 0px 0px 35px 20px;
+    padding: 4px;
+    width: 85%;
+    height: 5%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 1px double rgb(184, 179, 223);
+    font-size: 12px;
 }

@@ -20,82 +20,67 @@
 		<hr size="1" color="lightblue">
 		<h2 id="week">Events happening this week</h2>
 		<div class="event-card">
-			<img src="images/event.png" height="250" alt="description of the seminar">
+			<img src="<?php include_once("utils/events.php");  getImg(1); ?>" height="250" alt="description of the seminar">
 			<div>
-				<h3 class="event-title">Corporate Entrepreneurnship, Employee Engagement and Innovation
+				<h3 class="event-title"><?php include_once("utils/events.php");  getFrom(1, 'title'); ?>
 				</h3>
-				<h3 class="event-presenter"> By - Dr. Afework Getachew Kassa</h3>
-				<p>📅 Wednesday, Dec 22, 1:30 PM</p>
-				<p>📌 <strong>in AASTU Block 80 Room 111</strong></p>
-				<p>The department of Business management is kindly inviting all members of staff and
-					students to attend a Seminar Presenation to be delivered by Dr. Afework Getachew Kassa
-					on a title "Corporate Entrepreneurnship,
-					Employee Engagement and Innovation: A Resource based view and A Social Exchange Theory
-					Perspective -Excerpts from an Article Published"
+				<h3 class="event-presenter"> By -<?php include_once("utils/events.php");  getFrom(1, 'eventHost');?> </h3>
+				<p>📅 <?php include_once("utils/events.php");  getFrom(1, 'eventData');?>
+				<p>📌 <strong>in <?php include_once("utils/events.php");  getFrom(1, 'locations');?></strong></p>
+				<p><?php include_once("utils/events.php");  getFrom(2, 'descriptions'); ?>
 				</p>
 			</div>
 		</div>
 		<div class="event-card">
-			<img src="images/man.jpg" alt="Manyazewal eshetu">
+			<img src="<?php include_once("utils/events.php");  getImg(2); ?>" alt="Manyazewal eshetu">
 			<div>
-				<h3 class="event-title">Motivational speech on what to do inside AASTU</h3>
-				<h3 class="event-presenter"> By - Manyazewal Eshetu</h3>
-				<p>📅 Thursday, Dec 23, 4:00 PM</p>
-				<p>📌 Red Carpet</p>
-				<p>Join Manyazewal Eshetu, <strong> at AASTU Red Carpet</strong> to listen to his
-					motivating and inspiring speech titled "Things I wish I knew when I was in AASTU"
-					<strong>Presented by - AASTU Alumini Group together with AASTU Student Union</strong>
+				<h3 class="event-title"><?php include_once("utils/events.php");  getFrom(2, 'title');?></h3>
+				<h3 class="event-presenter"> By -<?php include_once("utils/events.php");  getFrom(2, 'eventHost');?></h3>
+				<p>📅 <?php include_once("utils/events.php");  getFrom(2, 'eventData');?></p>
+				<p>📌 <?php include_once("utils/events.php");  getFrom(2, 'locations');?></p>
+				<p><?php include_once("utils/events.php");  getFrom(2, 'descriptions');?>
 				</p>
 			</div>
 		</div>
 		<h2 id="month">Events that happened this month</h2>
 		<div class="event-card">
-			<img src="images/squid (1).jpg" alt="squid game">
+			<img src="<?php include_once("utils/events.php");  getImg(3); ?>" alt="squid game">
 			<div>
 				<h3 class="event-title">
-					Squid Game in real life for AASTU Students
+				<?php include_once("utils/events.php");  getFrom(3, 'title');?>
 				</h3>
-				<h3 class="event-presenter"> By - @AASTU_SG</h3>
-				<p>📅 Happened on Friday, Dec 10, 4:00 PM</p>
+				<h3 class="event-presenter"> By - <?php include_once("utils/events.php");  getFrom(3, 'eventHost');?></h3>
+				<p>📅 Happened on <?php include_once("utils/events.php");  getFrom(3, 'eventData');?></p>
+				<p>📌 <?php include_once("utils/events.php");  getFrom(3, 'locations');?></p>
 				<p>
-					The games on the popular Squid Game series was played in real life by AASTU
-					Students on Friday Decemeber 10. There were 5 games in total and whomever finishes
-					all 5 games wins the competition. Each player must
-					pay 20 birr to register to win a 3000 birr prize. Even though many people
-					registered only a handful of students competed but still it was a fun afternoon and
-					the winner recieved his prize.
+				<?php include_once("utils/events.php");  getFrom(3, 'descriptions');?>
 				</p>
 				</td>
 			</div>
 		</div>
 		<div class="event-card">
-			<img src="images/event.png" alt="ahamenes event">
+			<img src="<?php include_once("utils/events.php");  getImg(1); ?>" alt="ahamenes event">
 			<div>
 				<br>
-				<h3 class="event-title">The launching of the Ahamenes space science and technology
-					club</h3>
-				<h3 class="event-presenter"> By - Ahamenes space sciene and technology club members</h3>
-				<p>📅 Happened on Monday, Dec 13, 12:00 PM</p>
+				<h3 class="event-title"><?php include_once("utils/events.php");  getFrom(4, 'title');?></h3>
+				<h3 class="event-presenter"> By - <?php include_once("utils/events.php");  getFrom(4, 'eventHost');?></h3>
+				<p>📅 Happened on <?php include_once("utils/events.php");  getFrom(4, 'eventData');?></p>
+				<p>📌 <?php include_once("utils/events.php");  getFrom(4, 'locations');?></p>
 				<p>
-					Ahamenes space sciene and technology club members gave a general <br> description about
-					the club. Also guest speakers Dr. Abraham Debebe, <br> research and technology transfer
-					vice president and Dr. Melaku Desta, <br> head
-					of mechanical engineering department gave their presentations.
+				<?php include_once("utils/events.php");  getFrom(4, 'descriptions');?>
 				</p>
 				</td>
 			</div>
 		</div>
 		<div class="event-card">
-			<img src="images/event.png" alt="cassiopia event">
+			<img src="<?php include_once("utils/events.php");  getImg(1); ?>" alt="cassiopia event">
 			<div>
-				<h3 class="event-title">Business and Entrepreneurnship Insights Seminar</h3>
-				<h3 class="event-presenter"> By - Bereketeab Ermiyas and Biruk Kefale</h3>
-				<p>📅 Happened on Wednesday, Dec 15, 2:30 PM</p>
+				<h3 class="event-title"><?php include_once("utils/events.php");  getFrom(5, 'title');?></h3>
+				<h3 class="event-presenter"> By -<?php include_once("utils/events.php");  getFrom(5, 'eventHost');?></h3>
+				<p>📅 Happened on <?php include_once("utils/events.php");  getFrom(5, 'eventData');?></p>
+				<p>📌 <?php include_once("utils/events.php");  getFrom(5, 'locations');?></p>
 				<p>
-					Bereketeab Ermiyas, AASTU Graduate ToastMaster Designer and Biruk Kefale, GMK
-					Technologies Elomex Engineering gave a seminar on Business and Entrepreneurnship
-					insights, shared their experiences on the field
-					and called to register for membership.
+				<?php include_once("utils/events.php");  getFrom(5, 'descriptions');?>
 					<strong>Presented By - Cassiopia</strong>
 				</p>
 			</div>
@@ -111,36 +96,36 @@
 				title="YouTube video player" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen></iframe>
-			<img src="images/grad 1.jpg" width="350px" height="300" alt="graduation pic">
-			<img src="images/grad 2.jpg" width="500px" height="250" alt="graduation pic">
-			<img src="images/grad 3.jpg" width="350px" height="250" alt="a graduate student">
+			<img src="<?php include_once("utils/events.php");  getImg(5); ?>" width="350px" height="300" alt="graduation pic">
+			<img src="<?php include_once("utils/events.php");  getImg(6); ?>" width="500px" height="250" alt="graduation pic">
+			<img src="<?php include_once("utils/events.php");  getImg(7); ?>" width="350px" height="250" alt="a graduate student">
 		</div>
 		<div>
 			<h2 class="title">
 				Culture Day of 2013 G.C Students
 			</h2>
 			<h3 class="subtitle"> August 24, 2021</h3><br>
-			<img src="images/cult 1.jpg" width="350px" height="300" alt="culture day pic">
+			<img src="<?php include_once("utils/events.php");  getImg(8); ?>" width="350px" height="300" alt="culture day pic">
 			<video controls width="400" height="230">
-				<source src="videos/cultureday.mp4" type="video/mp4">
+				<source src="<?php include_once("utils/events.php");  getImg(12); ?>" type="video/mp4">
 			</video>
-			<img src="images/cult 2.jpg" width="350px" height="300" alt="culture day pic">
+			<img src="<?php include_once("utils/events.php");  getImg(9); ?>" width="350px" height="300" alt="culture day pic">
 		</div>
 		<div>
 			<h2 class="title">
 				Color Day of 2013 G.C Students
 			</h2>
 			<h3 class="subtitle"> August 12, 2021</h3><br>
-			<img src="images/color.jpg" height="350" alt="color day pic">
+			<img src="<?php include_once("utils/events.php");  getImg(10); ?>" height="350" alt="color day pic">
 			<video controls width="400" height="230">
-				<source src="videos/colorday.mp4" type="video/mp4">
+				<source src="<?php include_once("utils/events.php");  getImg(13); ?>" type="video/mp4">
 			</video>
-			<img src="images/color 2.jpg" width="350px" height="300" alt="color day pic">
+			<img src="<?php include_once("utils/events.php");  getImg(11); ?>" width="350px" height="300" alt="color day pic">
 		</div>
 		<h3>Posts</h3>
 		<ul>
-			<li><a href="articles/why_join_aastu.html">Top 5 reasons why you should join AASTU</a></li>
-			<li><a href="articles/time_mgt.html">Time management Tips</a></li>
+			<li><a href="articles/why_join_aastu.php">Top 5 reasons why you should join AASTU</a></li>
+			<li><a href="articles/time_mgt.php">Time management Tips</a></li>
 		</ul>
 	</main>
 
