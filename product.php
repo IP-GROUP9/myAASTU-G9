@@ -1,7 +1,8 @@
 <?php include('utils/init.php');
-include "pro_db.php";
+include "utils/db.php";
 include "utils/selectpro.php";
-mysqli_close($conn); ?>
+// mysqli_close($conn);
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
