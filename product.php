@@ -17,7 +17,7 @@
         <h1>Product and services.</h1>
         <?php
         if (isset($_SESSION['user']) and $_SESSION['user']['username'] == 'admin'){
-                                echo "<div align = 'right'><a href='uiadmin.php?'><input type = 'button' name = 'Add' value = 'Add'></a></div>";
+                                echo "<div><a href='uiadmin.php?'><input type = 'button' name = 'Add' value = 'Add'></a></div><br>";
                             }
                             ?>
 
@@ -112,8 +112,7 @@
                             <h3 style = "color: #9844ff"><?php echo $sevice['servicegiver']; 
                             if (isset($_SESSION['user']) and $_SESSION['user']['username'] == 'admin'){
                                 $id = $sevice['id'];
-                                echo "\t<a href='admin.php?id=$id'><input type = 'button' name = 'delete' value = 'Delete'></a>";
-                            }
+                                echo "\t<a href='admin.php?id=$id'><input type = 'button' class = 'button' name = 'delete' class = 'bott' value = 'Delete'></a>";                            }
                             ?></h3>
                             <div class="col" style ="color: rgb(100,55,240)">
                                 <div class="event-card z-depth-0">
