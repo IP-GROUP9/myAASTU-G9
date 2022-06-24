@@ -14,6 +14,13 @@
     <?php include("nav.php"); ?>
     <!-- main body -->
     <main class="container">
+    <?php
+if(isset($_SESSION['status']))
+{
+    echo $_SESSION['status'];
+    unset($_SESSION['status']);
+}
+?>
         <h1>Product and services.</h1>
         <?php
         if (isset($_SESSION['user']) and $_SESSION['user']['username'] == 'admin'){
@@ -95,7 +102,7 @@
                         ?>
                     <h3><?php echo $sevice['servicegiver']?></h3>
                     <p><?php echo $sevice['prod_description']?></p>
-                    <a target = _blank href="<?php echo htmlspecialchars($service['prod_address'])?>">
+                    <a target = _blank href="<?php echo htmlspecialchars($sevice['prod_address'])?>">
                     <button class = "button" valign = "center"><span>Press</span></button></a> to go to <?php echo $sevice['servicegiver'];?>
 
                     
@@ -112,7 +119,7 @@
                             <h3 style = "color: #9844ff"><?php echo $sevice['servicegiver']; 
                             if (isset($_SESSION['user']) and $_SESSION['user']['username'] == 'admin'){
                                 $id = $sevice['id'];
-                                echo "\t<a href='admin.php?id=$id'><input type = 'button' class = 'button' name = 'delete' class = 'bott' value = 'Delete'></a>";                            }
+                                echo "\t<a href='admin.php?id=$id'><input type = 'button' class = 'button' name = 'delete' class = 'bott' value = 'Remove'></a>";                            }
                             ?></h3>
                             <div class="col" style ="color: rgb(100,55,240)">
                                 <div class="event-card z-depth-0">
