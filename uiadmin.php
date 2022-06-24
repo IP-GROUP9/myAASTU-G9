@@ -70,8 +70,6 @@ include_once('utils/init.php');
             </form>
 
         </div>
-
-
         <br>
         <p style="color:blue; font-size:22px; font-weight:bold" align="center">Delete A Record
         <p>
