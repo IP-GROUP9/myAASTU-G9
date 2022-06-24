@@ -1,6 +1,6 @@
-<?php include "pro_db.php";?>
+<?php include "utils/db.php";?>
 <?php include('utils/init.php') ?>
-<?php include "utils/selectpro.php";mysqli_close($conn);?>
+<?php include "utils/selectpro.php";?>
 <?php include "admin.php"?>
 <!DOCTYPE html>
 <html lang="en">
@@ -181,11 +181,7 @@ if(isset($_SESSION['status']))
                 </div>
                 </details>
         </div>
-        <h3>Posts</h3>
-        <ul>
-            <li><a href="articles/why_join_aastu.html">Top 5 reasons why you should join AASTU</a></li>
-            <li><a href="articles/time_mgt.html">Time management Tips</a></li>
-        </ul>
+        <?php include("_posts.php"); ?>
     </main>
     <?php include("footer.php"); ?>
 </body>
