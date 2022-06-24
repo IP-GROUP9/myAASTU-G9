@@ -2,6 +2,7 @@
 <?php include 'utils/db.php'?>
 <?php include 'admin.php'?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,13 +19,22 @@ if(isset($_SESSION['status']))
     unset($_SESSION['status']);
 }
 ?>
-    <details>
-        <summary>Add Data</summary>
+    
+        <div align="center">
+        To Update click: <input type="checkbox" id="myCheck" name = "update" onclick="revealhide()">
+        </div>
+        <div style = "color: blue; font-weight: bold">
+            <h3 id="hidetxt" align = "center">Add Data</h3>
+            <h3 id="revealtxt" style="display:none" align = "center">Update Data</h3>
+        </div>
         <div class = "form-container">
-        
-        <form method="post" action = "admin.php" >
-            <br>
-        <label>Service Giver *</label>
+            
+            <form method="post" action = "admin.php" >
+                <br>
+                <label style="display:none" id="idnolabel">ID</label>
+                <input type="number" id="idno" name="idno" style="display:none" class = "form-input" min = 1>
+                <br>
+        <label>Service Giver</label>
           
         <input type = "text" name="servicename" class = "form-input" required>
         
@@ -32,11 +42,11 @@ if(isset($_SESSION['status']))
             
         <input type = "text" name="description" class = "form-input">
          
-        <label>First Meal (comma separated list) *</label>  
+        <label>First Meal (comma separated list)</label>  
         
         <input type = "text" name="servetime1" class = "form-input" required>
         
-        <label>Price for First Meal (comma separated list) *</label>
+        <label>Price for First Meal (comma separated list)</label>
             
         <input type = "text" name="price1" class = "form-input" required>
         
@@ -51,18 +61,17 @@ if(isset($_SESSION['status']))
         <label>Map Address of the place</label>
          
         <input type = "text" name="address" class = "form-input">
-        
+
         <h3 style="color:rgb(240,10,50)">PLEASE DO A DOUBLE CHECK BEFORE SUBMITTING!!!</h3>
        
-        <input type = "submit" name = "add" value="SUBMIT" class = "button">
+        <input type = "submit" name = "add_update" value="SUBMIT" class = "button">
     </form>
     
 </div>
 
-    </details>
+    
     <br> 
-    <details>
-        <summary>Delete A Record</summary>
+    <p style="color:blue; font-size:22px; font-weight:bold" align = "center">Delete A Record<p>
         <div class = "form-container">
             
             
@@ -76,7 +85,7 @@ if(isset($_SESSION['status']))
         </form>
         
         </div>
-    </details>
+    
 
     </main>
     <?php include_once('footer.php');?>

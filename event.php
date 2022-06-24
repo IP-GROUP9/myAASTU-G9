@@ -122,11 +122,7 @@
 			</video>
 			<img src="<?php include_once("utils/events.php");  getImg(11); ?>" width="350px" height="300" alt="color day pic">
 		</div>
-		<h3>Posts</h3>
-		<ul>
-			<li><a href="articles/why_join_aastu.php">Top 5 reasons why you should join AASTU</a></li>
-			<li><a href="articles/time_mgt.php">Time management Tips</a></li>
-		</ul>
+        <?php include_once('_posts.php') ?>
 	</main>
 
 	<?php include_once("footer.php"); ?>

@@ -37,5 +37,8 @@
 			</g>
 		</svg>
 	</a>
+	<span class="slide-num">
+
+	</span>
 </div>
 </div>

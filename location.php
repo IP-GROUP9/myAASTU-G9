@@ -21,7 +21,7 @@
 			</p>
 			<h3 style="color: dodgerblue;">You can click on or hover over the following image to identify places</h3>
 		</div>
-		<img src="AREA.bmp" usemap="#image-map" class="location-img">
+		<img src="images/AREA.bmp" usemap="#image-map" class="location-img">
 		<map name="image-map">
 			<area title="UNDERCONSTRUCTION OR NO DETAILS YET" href="" shape="poly"
 				coords="414,89,451,69,539,74,624,93,751,112,849,149,941,206,954,245,953,341,949,505,887,536,765,530,609,527,422,495,209,418,133,384,290,267,351,283,418,298,466,313,506,319,623,342,654,289,691,281,725,276,713,241,682,178,653,143,565,105"
