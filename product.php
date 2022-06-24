@@ -24,7 +24,7 @@ if(isset($_SESSION['status']))
         <h1>Product and services.</h1>
         <?php
         if (isset($_SESSION['user']) and $_SESSION['user']['username'] == 'admin'){
-                                echo "<div><a href='uiadmin.php?'><input type = 'button' name = 'Add' value = 'Add'></a></div><br>";
+                                echo "<div><a href='uiadmin.php?'><input type = 'button' name = 'Add' value = 'Add Product' class = 'button'></a></div><br>";
                             }
                             ?>
 
