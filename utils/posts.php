@@ -9,13 +9,16 @@ function create_post($title, $body, $author_id, $cover_pic)
     $stmt->execute();
 }
 
-function get_posts() {
+function get_posts($approved = 1)
+{
     global $conn;
-    $result = $conn->query("SELECT * FROM post");
+    $sql = "SELECT * FROM post Where approved = $approved";
+    $result = $conn->query($sql);
     return $result->fetch_all(MYSQLI_ASSOC);
 }
 
-function get_post($id) {
+function get_post($id)
+{
     global $conn;
     $stmt = $conn->prepare("SELECT * FROM post WHERE id = ?");
     $stmt->bind_param('i', $id);
@@ -23,16 +26,23 @@ function get_post($id) {
     return $stmt->get_result()->fetch_assoc();
 }
 
-function update_post($id, $cover_pic, $title, $body) {
+function update_post($id, $cover_pic, $title, $body)
+{
     global $conn;
     $stmt = $conn->prepare("UPDATE post SET title=?, cover_pic=?, body=? WHERE id = ?");
     $stmt->bind_param('sssi', $title, $cover_pic, $body, $id);
     $stmt->execute();
 }
 
-function delete_post($id) {
+function delete_post($id)
+{
     global $conn;
     $stmt = $conn->prepare("DELETE FROM post WHERE id = ?");
     $stmt->bind_param('i', $id);
     $stmt->execute();
+}
+function approve($id)
+{
+    global $conn;
+    $conn->query("Update post set approved = true where id=$id");
 }

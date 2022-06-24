@@ -12,7 +12,7 @@ function send_mail($subject, $email, $username, $link, $file = 'reset.html')
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->Port = 465;
-    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->SMTPAuth = true;

@@ -23,7 +23,7 @@ include_once('utils/util.php') ?>
                 <input type="text" value="<?= array_get($_POST, 'username') ?>" name="username" placeholder="Username" required>
                 <input type="text" value="<?= array_get($_POST, 'email') ?>" name="email" placeholder="Email" required>
                 <input type="password" name="password" minlength="8" placeholder="Passowrd" required>
-                <input type="hidden" name="MAX_FILE_SIZE" value="1200000"> <!-- max size 1.5 MB -->
+                <input type="hidden" name="MAX_FILE_SIZE" value="4200000"> <!-- max size 4.5 MB -->
                 <label class="upload-label">
                     <input type="file" class="upload-button" name="profile_pic" accept="image/*"/>
                         ⤒ 🗃 upload profile picture
@@ -58,18 +58,18 @@ include_once('utils/util.php') ?>
                     if (!$user) {
                         $file = null;
                         if ($profile_pic['name'] != '') {
-                            $file = '/images/profile/' . basename($profile_pic['name']);
+                            $file = 'images/profile/' . basename($profile_pic['name']);
                             if (!move_uploaded_file($profile_pic['tmp_name'], $file))
                                 $error .= 'unable to upload file<br>';
+                            $file = '/' . $file;
                         }
                         $password = password_hash($password, PASSWORD_DEFAULT);
-                        if ($error == '') {
-                            create_user($username, $email, $password, $file);
+                        if ($error == '' && create_user($username, $email, $password, $file)) {
                             header("Location: /login.php");
                             exit;
                         }
                     } else
-                        $error .= 'Username already exists<br>';
+                        $error .= 'Username already taken<br>';
                 }
                 if ($error != '')
                     echo "<div class='error'>$error</div>";

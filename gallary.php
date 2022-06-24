@@ -17,25 +17,30 @@
         </div>
         <div class="image-container">
             <?php
-            for ($i=1; $i < 22; $i++) {
+            for ($i = 1; $i < 22; $i++) {
                 echo "<img src='images/aastu/$i.jpg' alt='Image of AASTU' style='width:100%;text-align:center;'>";
-            }?>
+            } ?>
         </div>
     </main>
     <?php include_once("footer.php"); ?>
     <script src="js/siema.min.js"></script>
     <script>
         function setSlideNum() {
-            document.querySelector('.slide-num').innerHTML = this.currentSlide + '/21';
+            document.querySelector('.slide-num').innerHTML = this.currentSlide + 1 + '/21';
         }
         const s = new Siema({
             selector: '.image-container',
-            onInit: () => setSlideNum(),
-            onChange: () => setSlideNum(),
+            onInit: setSlideNum,
+            onChange: setSlideNum,
         });
+        document.body.addEventListener('keydown', function(e) {
+            if (e.key == 'ArrowRight')
+                s.next();
+            else if (e.key == 'ArrowLeft')
+                s.prev();
+        })
         document.querySelector('.prev').addEventListener('click', () => s.prev())
         document.querySelector('.next').addEventListener('click', () => s.next())
-
     </script>
 </body>
 

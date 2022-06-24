@@ -1,10 +1,4 @@
 <?php
-function is_logged() {
-    return isset($_SERVER['user']);
-}
-function is_admin() {
-    return is_logged() && $_SERVER['user']['username'] == 'admin';
-}
 
 function printTruncated($maxLength, $html, $isUtf8=true)
 {

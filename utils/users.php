@@ -9,7 +9,7 @@ function create_user($username, $email, $password, $profile_pic)
   if (!$profile_pic)
     $profile_pic = "/images/profile/placeholder.png";
   $stmt->bind_param('ssss', $username, $email, $password, $profile_pic);
-  $stmt->execute();
+  return $stmt->execute();
 }
 
 function get_user($username)
@@ -46,10 +46,7 @@ function insert_pass_reset($email, $key, $expDate) {
 
 function get_reset_pass($email, $key) {
   global $conn;
-  $stmt = $conn->prepare("SELECT * FROM password_reset_temp WHERE email = ? AND `key` = ?");
-  $stmt->bind_param('ss', $email, $key);
-  $stmt->execute();
-  $result = $stmt->get_result();
+  $result = $conn->query("SELECT * FROM password_reset_temp WHERE email='$email' AND `key` = '$key'");
   return $result->fetch_assoc();
 }
 

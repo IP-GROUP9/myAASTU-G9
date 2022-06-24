@@ -25,7 +25,10 @@
 					<img src="<?= $user['profile_pic'] ?>" alt="profile pic" class="profile-pic dropdown-btn" onclick="toggleDropdown()">
 					<div id="my-dropdown" class="dropdown-body">
 						<a href="reset_password.php">reset password</a>
-						<?php if ($_SESSION['user']['username'] == 'admin') echo '<a href="uiadmin.php">Admin dashboard</a>' ?>
+						<?php if ($_SESSION['user']['username'] == 'admin') { ?>
+							<a href="uiadmin.php">Admin dashboard</a>
+							<a href="approve_post.php">Approve posts</a>
+						<?php } ?>
 						<a href="logout.php">Log out</a>
 					</div>
 				</div>
