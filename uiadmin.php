@@ -1,6 +1,6 @@
 <?php include 'pro_db.php'?>
 <?php include 'admin.php'?>
-
+<?php include('utils/init.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
