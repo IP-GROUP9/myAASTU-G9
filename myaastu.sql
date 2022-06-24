@@ -27,13 +27,44 @@ SET time_zone = "+00:00";
 -- Table structure for table `post`
 --
 
+CREATE TABLE `user` (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(80) UNIQUE NOT NULL,
+    email VARCHAR(80) UNIQUE NOT NULL,
+    profile_pic VARCHAR(255) DEFAULT 'https://picsum.photos/400/250';
+    password VARCHAR(80) NOT NULL
+);
+
 CREATE TABLE `post` (
-  `id` int(11) NOT NULL,
-  `author_id` int(11) NOT NULL,
-  `created` timestamp NOT NULL DEFAULT current_timestamp(),
-  `title` varchar(255) NOT NULL,
-  `body` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    author_id  INT NOT NULL,
+    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    title VARCHAR(255) NOT NULL,
+    body TEXT NOT NULL,
+    profile_pic VARCHAR(80) DEFAULT '/images/profile/placeholder.png',
+    FOREIGN KEY (author_id) REFERENCES user (id)
+);
+CREATE TABLE `events` (
+    id int(11) PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    eventHost VARCHAR(255) NOT NULL,
+    descriptions TEXT NOT NULL,
+    eventData VARCHAR(255) NOT NULL,
+    locations VARCHAR(255) NOT NULL
+);
+
+
+ CREATE TABLE `images` (
+    id int(11) PRIMARY KEY AUTO_INCREMENT,
+    imageName VARCHAR(128) NOT NULL,
+    imgDir VARCHAR(128) NOT NULL
+);
+
+CREATE TABLE `password_reset_temp` (
+  email varchar(250) NOT NULL,
+  `key` varchar(250) NOT NULL,
+  expDate datetime NOT NULL
+);
 
 -- --------------------------------------------------------
 

@@ -1,16 +1,15 @@
-
-<?php include 'utils/db.php'?>
+<?php include 'pro_db.php'?>
 <?php include 'admin.php'?>
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include_once('head.php') ?> 
+    <?php include('head.php') ?> 
     <title>Control DataBase</title>
 </head>
 <body>
-    <?php include_once('nav.php');?>
+    <?php include('nav.php');?>
     <main class="container">
 <?php
 if(isset($_SESSION['status']))
@@ -71,23 +70,9 @@ if(isset($_SESSION['status']))
 
     
     <br> 
-    <p style="color:blue; font-size:22px; font-weight:bold" align = "center">Delete A Record<p>
-        <div class = "form-container">
-            
-            
-        <form method = "post" action = "admin.php" class="form">
-            <br>
-            <label>Input the <b>ID</b> of the product/service you wish to delete</label>
-           
-            <input type = "number" min = 0 name = 'idno' class = "form-input">
-            <h3 style="color:rgb(240,10,50)">YOU ARE ABOUT TO DELETE A PRODUCT!!!</h3>
-            <input type = "submit" name = "delete" value = "DELETE" class = "button">
-        </form>
-        
-        </div>
     
 
     </main>
-    <?php include_once('footer.php');?>
+    <?php include('footer.php');?>
 </body>
 </html>

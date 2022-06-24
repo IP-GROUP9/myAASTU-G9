@@ -1,6 +1,6 @@
 -- create user and set up db
-CREATE user IF NOT EXISTS 'aastu'@'localhost' IDENTIFIED BY 'myaastu_pwd';
-GRANT ALL ON myaastu.* TO 'aastu'@'localhost';
+CREATE user IF NOT EXISTS 'myaastu'@'localhost' IDENTIFIED BY 'myaasu';
+GRANT ALL ON myaastu.* TO 'myaastu'@'localhost';
 
 CREATE DATABASE IF NOT EXISTS myaastu;
 use myaastu;
@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS post;
 DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS events;
 DROP TABLE IF EXISTS images;
-CREATE TABLE user (
+CREATE TABLE `user` (
     id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(80) UNIQUE NOT NULL,
     email VARCHAR(80) UNIQUE NOT NULL,
