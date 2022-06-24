@@ -113,7 +113,6 @@
                             if (isset($_SESSION['user']) and $_SESSION['user']['username'] == 'admin'){
                                 $id = $sevice['id'];
                                 echo "\t<a href='admin.php?id=$id'><input type = 'button' name = 'delete' value = 'Delete'></a>";
-                                echo "\t<a href='uiadmin.php?'><input type = 'button' name = 'Add' value = 'Add'></a>";
                             }
                             ?></h3>
                             <div class="col" style ="color: rgb(100,55,240)">
